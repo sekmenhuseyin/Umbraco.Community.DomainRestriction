@@ -12,15 +12,16 @@ Umbraco package that allows to restrict domain-based access to the backoffice.
 ## Configuration
 ### Appsettings
 Step 1: Under appsettings, create a section called "DomainRestriction", with:
-- bool `Enabled`, which enables and disables the 403 redirects
+- bool `Enabled`, which enables the domain restriction
+- string `UmbracoDomain`, the only allowed domain to access the backoffice
 - string `UmbracoPath`, which will have a default value of `"/umbraco"`
-- string `RedirectUrl`, which will have a default value of `"/error-404"`
+- string `RedirectUrl`, which will have a default value of `"/error-404"`. if left empty it will return a 404 error.
 
 ``` json
 "DomainRestriction": {
 	"Enabled": true,
 	"UmbracoPath": "/umbraco",
-	"UmbracoDomain": "https://www.example.com",
+	"UmbracoDomain": "https://localhost:4000",
 	"RedirectUrl": "/error-404"
 }
 ```

@@ -3,8 +3,8 @@
 public class DomainRestrictionSettings
 {
 	public const string SectionName = "DomainRestriction";
-	public bool Enabled { get; set; } = true;
-	public string UmbracoPath { get; set; } = "/umbraco";
-	public string UmbracoDomain { get; set; } = "https://www.example.com";
-	public string RedirectUrl { get; set; } = "/error-404";
+	public bool Enabled { get; init; } = false;
+	public string UmbracoPath { get; init; } = "/umbraco";
+	public string UmbracoDomain { get; init; } = string.Empty;
+	public string RedirectUrl { get; init; } = string.Empty;
 }

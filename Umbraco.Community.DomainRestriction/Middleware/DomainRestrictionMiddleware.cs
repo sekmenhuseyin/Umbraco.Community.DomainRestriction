@@ -7,24 +7,19 @@ public class DomainRestrictionMiddleware(
 {
 	public async Task Invoke(HttpContext context)
 	{
-		if (!domainRestrictionConfigService.Settings.Enabled)
-		{
-			await next.Invoke(context);
-			return;
-		}
-
+		var isEnabled = domainRestrictionConfigService.Settings.Enabled;
+		var umbracoDomain = domainRestrictionConfigService.Settings.UmbracoDomain;
 		var umbracoPath = domainRestrictionConfigService.Settings.UmbracoPath.TrimStart('~');
 		var requestedPath = context.Request.Path.ToString();
+		var requestedHost = context.Request.Host.ToString();
 
-		if (requestedPath.InvariantContains(umbracoPath))
+		if (!isEnabled || string.IsNullOrWhiteSpace(umbracoDomain) || string.IsNullOrWhiteSpace(umbracoPath))
 		{
 			await next.Invoke(context);
 			return;
 		}
 
-		var umbracoDomain = domainRestrictionConfigService.Settings.UmbracoDomain;
-		var host = context.Request.Host.ToString();
-		if (host.InvariantContains(umbracoDomain))
+		if (requestedPath.InvariantContains(umbracoPath) && requestedHost.InvariantContains(umbracoDomain))
 		{
 			context.Response.StatusCode = (int)HttpStatusCode.NotFound;
 			if (!string.IsNullOrWhiteSpace(domainRestrictionConfigService.Settings.RedirectUrl))
