@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Version>1.0.0</Version>
+		<Authors>Hüseyin Sekmenoğlu</Authors>
+		<PackageTags>umbraco;backoffice;domain;restriction;umbraco-marketplace</PackageTags>
+		<Description>Restrict Umbraco backoffice access to a domain</Description>
+		<PackageId>Umbraco.Community.DomainRestriction</PackageId>
+		<Product>Umbraco Backoffice Restriction based on Domain</Product>
+		<PackageProjectUrl>https://sekmen.dev/</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/sekmenhuseyin/Umbraco.Community.DomainRestriction</RepositoryUrl>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Umbraco.Cms.Web.Common" Version="14.2.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="icon.png" Pack="true" PackagePath="\" />
+		<None Include="..\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+</Project>

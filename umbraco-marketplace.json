@@ -1,0 +1,23 @@
+{
+	"$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+	"AlternatePackageNames": [ "DomainRestriction" ],
+	"AuthorDetails": {
+		"Name": "Hüseyin Sekmenoğlu",
+		"Description": "Certified Umbraco Professional | Expert in .NET Core, Next.js & Advanced Software Methodologies",
+		"Url": "https://github.com/sekmenhuseyin",
+		"Contributors": [
+			{
+				"Name": "Hüseyin Sekmenoğlu",
+				"Url": "https://github.com/sekmenhuseyin"
+			}
+		]
+	},
+	"Title": "Backoffice Domain Restriction",
+	"Description": "Restrict access to the Umbraco backoffice based on domain name.",
+	"DocumentationUrl": "https://github.com/sekmenhuseyin/Umbraco.Community.DomainRestriction/issues",
+	"IssueTrackerUrl": "https://github.com/sekmenhuseyin/Umbraco.Community.DomainRestriction/issues",
+	"Category": "Developer Tools",
+	"LicenseTypes": [ "Free" ],
+	"PackageType": "Package",
+	"Tags": [ "backoffice","domain","restriction" ]
+}
