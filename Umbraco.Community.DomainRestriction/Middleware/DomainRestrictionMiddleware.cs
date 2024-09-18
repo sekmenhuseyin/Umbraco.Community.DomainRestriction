@@ -19,7 +19,7 @@ public class DomainRestrictionMiddleware(
 			return;
 		}
 
-		if (requestedPath.InvariantContains(umbracoPath) && requestedHost.InvariantContains(umbracoDomain))
+		if (requestedPath.InvariantContains(umbracoPath) && !requestedHost.InvariantContains(umbracoDomain))
 		{
 			context.Response.StatusCode = (int)HttpStatusCode.NotFound;
 			if (!string.IsNullOrWhiteSpace(domainRestrictionConfigService.Settings.RedirectUrl))

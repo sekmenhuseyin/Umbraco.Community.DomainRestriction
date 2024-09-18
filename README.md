@@ -39,10 +39,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-## Usage
-The package includes an http module that checks the range of ips entered on the backoffice. The values are saved on the cache so the file is not continuosly read. If the client's ip is not whitelisted it returns a 403. It's up to you to manage that code.
-
 #### Dealing with the 403 code
-When the client ip is forbidden, the system will return a 403 error (forbidden). This returns a blank page. You can set up the page that the user will see following this docs:
+When the client domain is forbidden, the system will return a blank page. You can set up the page that the user will see following this docs:
  - [Letting Umbraco to deal with it](http://letswritecode.net/articles/how-to-setup-custom-error-pages-in-umbraco/)
  - [Letting IIS to deal with it](https://blog.mortenbock.dk/2017/02/03/error-page-setup-in-umbraco/)
