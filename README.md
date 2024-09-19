@@ -7,7 +7,7 @@ Umbraco package that allows to restrict domain-based access to the backoffice.
 [nuget.org/packages/Umbraco.Community.DomainRestriction](https://www.nuget.org/packages/Umbraco.Community.DomainRestriction)
 
 ### Umbraco Package
-[marketplace.umbraco.com/category/developer-tools](https://marketplace.umbraco.com/category/developer-tools)
+[marketplace.umbraco.com/package/umbraco.community.domainrestriction](https://marketplace.umbraco.com/package/umbraco.community.domainrestriction)
 
 ## Configuration
 ### Appsettings
